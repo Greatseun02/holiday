@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import './index.css';
-import { format } from 'date-fns';
 import Book from './Components/Book';
 import ContactDetails from './Components/ContactDetails';
 
@@ -24,12 +23,12 @@ export default function TableBookingForm() {
     phone: ''
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setBookingDetails((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleDateChange = (e) => {
+  const handleDateChange = (e:React.ChangeEvent<HTMLInputElement>) => {
     setBookingDetails((prev) => ({ ...prev, date: e.target.value }));
   };
 

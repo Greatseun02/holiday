@@ -1,4 +1,18 @@
-export default function ContactDetails({bookingDetails, handleChange, handleConfirm}){
+interface ContactDetailsProps {
+  bookingDetails: {
+    date: string;
+    time: string;
+    persons: number;
+    name: string;
+    email: string;
+    phone: string;
+  };
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleConfirm: () => void;
+}
+
+
+export default function ContactDetails({bookingDetails, handleChange, handleConfirm}: ContactDetailsProps){
     
     return(
         <div className="form-step">

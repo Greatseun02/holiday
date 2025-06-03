@@ -7,8 +7,6 @@ import Movies from './Movies';
 
 
 function App(){
-  let newDate = new Date();
-
 
   return (
     <>
