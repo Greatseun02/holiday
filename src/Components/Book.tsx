@@ -1,4 +1,19 @@
-export default function Book({bookingDetails, handleDateChange, handleChange, handleNextStep}){
+interface BookProps {
+  bookingDetails: {
+    date: string;
+    time: string;
+    persons: number;
+    name: string;
+    email: string;
+    phone: string;
+  };
+  handleDateChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleNextStep: () => void;
+}
+
+
+export default function Book({bookingDetails, handleDateChange, handleChange, handleNextStep}:BookProps){
     return(
         <div className="form-step">
             <div className="form-group">
